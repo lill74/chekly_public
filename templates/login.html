@@ -1,0 +1,42 @@
+{% extends 'layout.html' %} {% block content %}
+
+<input type="hidden" id="phoneNumber" value="" />
+<div class="container shadow-lg bg-white center_div w-75 pt-3 pb-3 center_div">
+  <h3 class="font-bold">전화번호로</h3>
+  <h3 class="font-bold">로그인하기</h3>
+  <div>
+    <div class="form-group">
+      <label for="inputPhoneNumber" class="font-bold">전화번호</label>
+      <small class="font-italic" id="countdown"></small>
+      <input
+        type="number"
+        class="form-control rounded-0"
+        id="inputPhoneNumber"
+        placeholder="01012345678"
+      />
+    </div>
+    <button
+      type="button"
+      class="btn btn-outline-secondary col rounded-0 shadow nowrap"
+      id="verifyPhone"
+      disabled
+    >
+      인증하기
+    </button>
+    <hr />
+    <div id="progress">
+      <label for="progress-bar">완료까지 2개중 1개</label>
+      <div class="progress w-100" id="progress-bar">
+        <div
+          class="progress-bar w-50"
+          role="progressbar"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

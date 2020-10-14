@@ -1,0 +1,5 @@
+- Sentry에 자바 스크립트 추적 추가하기! O
+- Sentry에 SQLAlchemy, Redis 추가하기! O
+- uptimerobot에서 statuspage로 변경하기! X
+- 구글 광고 추가하기! o
+- 개인정보 보호 방침 보이게 height 조절 필요! o

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div class="alert alert-primary clearfix d-none" role="alert" id="alert">
+  <span id="alert-msg"></span
+  ><button
+    type="button"
+    class="btn btn-sm btn-primary float-right"
+    onclick="closeAlert();"
+  >
+    X
+  </button>
+</div>
+<div class="container shadow-lg bg-white center_div w-75 pt-3 pb-3">
+  <h3 class="font-bold">자가진단 기록보기</h3>
+  <h3 class="font-bold">회원정보 수정하기</h3>
+  <a
+    href="/register"
+    role="button"
+    class="btn btn-outline-primary rounded-0 shadow nowrap"
+    id="submit"
+  >
+    저장/수정/삭제</a
+  >
+  <div>
+    <ul
+      class="list-group list-group-flush shadow mt-3"
+      id="userInformation"
+    ></ul>
+    <ul
+      class="list-group list-group-flush shadow mt-3"
+      id="transactionsList"
+    ></ul>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
